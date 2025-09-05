@@ -1,178 +1,231 @@
-# Tmux Wizard 🧙‍♂️
+# Tmux Wizard TUI 🧙
 
-**A powerful, modular tmux workspace orchestrator for developers**
+**Unix-style keyboard-driven tmux session manager with popup integration**
 
-Tmux Wizard transforms the tedious process of setting up development environments into a delightful, interactive experience. With fuzzy-finding, intelligent templates, and modular architecture, it creates perfectly configured tmux workspaces in seconds.
+A minimal, focused TUI (Text User Interface) that transforms tmux session management into a delightful keyboard-driven experience. Built following Unix philosophy - simple, composable, and efficient.
 
-## ✨ Features
+## ✨ Key Features
 
-- 🎯 **Interactive Project Selection** - Fuzzy-find templates with fzf
-- 🚀 **Next.js Integration** - Built-in Shadcn/UI themes and templates  
-- 🔧 **Modular Architecture** - Clean, testable, extensible codebase
-- 🎨 **Beautiful UI** - Colored output and progress indicators
-- ⚡ **Lightning Fast** - Optimized for developer workflow
-- 🧪 **Fully Tested** - Comprehensive test suite
-- 📦 **Zero Config** - Works out of the box with sensible defaults
+- 🎯 **Unix-Style TUI** - Pure keyboard navigation with arrow keys
+- 🪟 **Popup Integration** - Launch wizard in floating tmux popup window
+- 🚀 **Next.js Projects** - Integrated create-next-app with template selection
+- 📁 **Saved Sessions** - Browse and launch tmuxinator configs and saved scripts
+- ⚡ **Session Management** - Create, switch, and manage tmux sessions
+- 🎨 **Adaptive UI** - Compact mode for popups, full mode for terminals
+- 🔧 **Multi-Pane Workspaces** - Configure 1-10 panes with custom applications
 
 ## 🚀 Quick Start
 
+### 1. Clone and Setup
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/tmux-wizard.git
-cd tmux-wizard
-
-# Make it executable
-chmod +x src/tmux-wizard.sh
-
-# Run the wizard
-./src/tmux-wizard.sh
+git clone https://github.com/williavs/tmux-wizard-tui.git
+cd tmux-wizard-tui
+chmod +x src/tuiwiz.sh bin/popup-wizard
 ```
 
-## 📋 Requirements
-
-- **tmux** - Terminal multiplexer
-- **fzf** - Fuzzy finder for interactive selections
-- **bash** - Shell scripting (4.0+)
-- **git** - Version control (for project templates)
-
-Optional but recommended:
-- **Node.js** - For Next.js/React projects
-- **Python** - For Python projects  
-- **Docker** - For containerized workflows
-
-## 🎮 Usage Examples
-
-### Create a Next.js Project with Shadcn/UI
+### 2. Add Popup Keybinding to ~/.tmux.conf
 ```bash
-./src/tmux-wizard.sh
-# Select "Next.js Project"
-# Choose your favorite theme with fzf
-# Wizard creates project + tmux session automatically
+# Add this line to your tmux configuration
+bind-key W display-popup -E -w 70% -h 60% -T "🧙 Tmux Wizard" "/path/to/tmux-wizard-tui/bin/popup-wizard"
 ```
 
-### Set Up API Development Environment
+### 3. Reload tmux config and use
 ```bash
-./src/tmux-wizard.sh
-# Select "Node.js API"
-# Wizard sets up Express + testing + docs panes
+tmux source-file ~/.tmux.conf
+# Now press <prefix>W to launch wizard in popup!
 ```
 
-### Custom Multi-Pane Workspace
+## 🎮 Usage
+
+### Popup Mode (Recommended)
+- Press `<prefix>W` (where `<prefix>` is your tmux prefix key)
+- Navigate with arrow keys `↑↓` 
+- Select with `Enter`
+- Go back with `←` or `h`
+- Quit with `q`
+
+### Terminal Mode
 ```bash
-./src/tmux-wizard.sh
-# Choose number of panes (1-10)
-# Select applications for each pane
-# Intelligent layout optimization
+# Run directly in terminal
+./src/tuiwiz.sh
 ```
 
 ## 🏗️ Architecture
 
-Tmux Wizard uses a modular architecture for maintainability and extensibility:
-
 ```
-tmux-wizard/
+tmux-wizard-tui/
+├── bin/
+│   └── popup-wizard           # Popup launcher script
 ├── src/
-│   └── tmux-wizard.sh      # Main entry point
+│   └── tuiwiz.sh             # Main TUI entry point
 ├── lib/
-│   ├── ui.sh               # User interface functions
-│   ├── tmux-manager.sh     # Tmux session management
-│   ├── project-manager.sh  # Project scaffolding
-│   ├── template-manager.sh # Template handling
-│   └── config.sh           # Configuration management
+│   ├── tui.sh                # Core TUI implementation
+│   ├── tmux-manager.sh       # Session management
+│   ├── project-manager.sh    # Project scaffolding
+│   ├── template-manager.sh   # Template handling
+│   └── ui.sh                 # UI utilities
 ├── scripts/
-│   ├── create-nextjs-shadcn.sh  # Next.js creation
-│   └── ...                     # Additional project types
-├── tests/
-│   └── *.sh               # Test suite
-└── docs/
-    └── *.md               # Documentation
+│   ├── create-nextjs-shadcn.sh  # Next.js project creation
+│   └── download-templates.sh    # Template management
+├── data/
+│   └── curated-templates.txt    # Next.js templates
+└── obsolete/
+    ├── tmux-wizard-monolith.sh  # Original monolithic version
+    └── tmux-wizard.sh           # Legacy version
 ```
 
-## 🎨 Supported Project Types
+## 🎨 Project Types Supported
 
-- **Next.js** - Full-stack React framework with Shadcn/UI themes
-- **React** - Client-side React applications
-- **Node.js API** - Express.js REST APIs
-- **Python** - Flask/Django applications  
-- **Static Sites** - HTML/CSS/JS projects
-- **Generic** - Any project type with custom configuration
+### Next.js Projects
+- **create-next-app** - Official Next.js starter with TypeScript
+- **Template Selection** - Choose from curated Next.js templates via fzf
+- **Theme Selection** - Shadcn/UI themes with interactive selection
+- **Multi-pane Setup** - Dev server, terminal, editor panes
+
+### Generic Projects  
+- **Multi-pane Workspaces** - 1-10 configurable panes
+- **Custom Applications** - Terminal, editor, dev server options
+- **Working Directory** - Specify project location
+
+### Saved Sessions
+- **Tmuxinator Configs** - Browse and launch existing tmuxinator sessions
+- **Saved Scripts** - Launch previously saved tmux session scripts
+- **Quick Access** - Fuzzy-find through all available sessions
+
+## ⌨️ Keyboard Navigation
+
+| Key | Action |
+|-----|---------|
+| `↑↓` | Navigate menu items |
+| `Enter` | Select/confirm option |
+| `←` or `h` | Go back |
+| `q` | Quit wizard |
+| `?` | Help (terminal mode only) |
 
 ## 🔧 Configuration
 
-Tmux Wizard works with zero configuration, but supports customization:
-
+### Tmux Integration
+The wizard integrates seamlessly with any tmux prefix:
 ```bash
-# Create config file
-cp examples/config.example.sh ~/.tmux-wizard-config
+# Works with default prefix (C-b)
+bind-key W display-popup -E -w 70% -h 60% -T "🧙 Tmux Wizard" "/path/to/bin/popup-wizard"
 
-# Edit your preferences
-vim ~/.tmux-wizard-config
+# Works with custom prefix (C-a)
+set-option -g prefix C-a
+bind-key W display-popup -E -w 70% -h 60% -T "🧙 Tmux Wizard" "/path/to/bin/popup-wizard"
 ```
 
-### Available Options
-
-- **Default project directory** - Where to create projects
-- **Preferred applications** - Default apps for panes
-- **Theme preferences** - UI colors and styling
-- **Template locations** - Custom template sources
-
-## 🧪 Testing
-
-Run the comprehensive test suite:
-
+### Popup Customization
+Modify popup size and appearance:
 ```bash
-# Run all tests
-./tests/run-all-tests.sh
+# Larger popup
+bind-key W display-popup -E -w 85% -h 75% -T "🧙 Tmux Wizard" "/path/to/bin/popup-wizard"
 
-# Run specific module tests
-./tests/test-ui.sh
-./tests/test-tmux.sh
-./tests/test-projects.sh
-
-# Integration tests
-./tests/integration.sh
+# Custom title
+bind-key W display-popup -E -w 70% -h 60% -T "My Wizard" "/path/to/bin/popup-wizard"
 ```
 
-## 📚 Documentation
+## 🎯 Design Philosophy
 
-- [API Documentation](docs/API.md) - Module interfaces and functions
-- [Contributing Guide](docs/CONTRIBUTING.md) - How to contribute
-- [Examples](docs/EXAMPLES.md) - Usage examples and recipes
-- [Changelog](CHANGELOG.md) - Version history
+**Unix Philosophy**: Do one thing well
+- Single-purpose tool for tmux session management
+- Keyboard-driven interface (no mouse required)
+- Composable with existing tmux workflows
+- Minimal dependencies
 
-## 🤝 Contributing
+**TUI Principles**: 
+- Consistent navigation patterns
+- Visual feedback for all actions
+- Responsive design (adapts to terminal size)
+- Graceful error handling
 
-We welcome contributions! Please see our [Contributing Guide](docs/CONTRIBUTING.md) for details.
+**Modern Integration**:
+- Popup mode for quick access
+- Automatic session switching
+- Template-based project creation
+- Saved session management
 
-### Quick Contribution Steps
+## 📋 Requirements
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Add tests for your changes
-5. Run the test suite (`./tests/run-all-tests.sh`)
-6. Commit your changes (`git commit -m 'Add amazing feature'`)
-7. Push to the branch (`git push origin feature/amazing-feature`)
-8. Open a Pull Request
+- **tmux** - Terminal multiplexer (tested with 3.0+)
+- **bash** - Shell scripting (4.0+)
+- **fzf** - Fuzzy finder for selections
+- **tput** - Terminal control
+
+Optional:
+- **Node.js** - For Next.js project creation
+- **tmuxinator** - For saved session configs
+
+## 🚦 Advanced Usage
+
+### Custom Templates
+Add your own Next.js templates to `data/curated-templates.txt`:
+```
+my-template | Custom template description
+another-template | Another custom template
+```
+
+### Integration with Existing Workflows
+```bash
+# Use in scripts
+echo "nextjs" | ./src/tuiwiz.sh --batch-mode
+
+# Chain with other commands
+./src/tuiwiz.sh && tmux list-sessions
+```
+
+### Saved Sessions Directory Structure
+```
+~/.config/tmuxinator/    # Tmuxinator configs
+~/tmux-scripts/views/    # Saved session scripts
+```
+
+## 🐛 Troubleshooting
+
+### Popup Not Closing
+Ensure you're using the `-E` flag in your tmux keybinding:
+```bash
+# Correct - popup closes automatically
+bind-key W display-popup -E -w 70% -h 60% -T "🧙 Tmux Wizard" "/path/to/bin/popup-wizard"
+
+# Incorrect - popup stays open
+bind-key W display-popup -w 70% -h 60% -T "🧙 Tmux Wizard" "/path/to/bin/popup-wizard"
+```
+
+### Session Creation Issues
+Check that tmux can create sessions:
+```bash
+# Test session creation manually
+tmux new-session -d -s test-session
+tmux list-sessions
+tmux kill-session -t test-session
+```
+
+### Template Selection Problems
+Verify fzf is installed and working:
+```bash
+# Test fzf
+echo -e "option1\noption2\noption3" | fzf
+```
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- [fzf](https://github.com/junegunn/fzf) - Amazing fuzzy finder
-- [tmux](https://github.com/tmux/tmux) - Terminal multiplexer
-- [Shadcn/UI](https://ui.shadcn.com/) - Beautiful UI components
+- **tmux** - The terminal multiplexer that makes this all possible
+- **fzf** - Fuzzy finder for beautiful selections
+- **Next.js** - The React framework we integrate with
+- **Unix philosophy** - Inspiration for the design approach
 
-## 🐛 Bug Reports & Feature Requests
+## 📈 Version History
 
-Please use the [GitHub Issues](https://github.com/yourusername/tmux-wizard/issues) page to report bugs or request features.
-
-## ⭐ Star History
-
-If you find this project helpful, please consider giving it a star!
+- **v2.0.0** (2025-09) - TUI rewrite with popup integration
+- **v1.0.0** - Original monolithic shell script version
 
 ---
 
-**Made with ❤️ by developers, for developers**
+**Made with ❤️ for tmux power users**
+
+*Press `<prefix>W` and let the magic begin! 🧙*
