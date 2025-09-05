@@ -1,0 +1,162 @@
+[
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "run a one liner to make an alias for it in bashrc call it newiz"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "can you make it so I can back up during the sript? I wish that if I made a mistake I coudl go back - - - - "
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "it still works - but how am I supposed to back up?"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "tbh - - - It almost feels like this should be wrQAPPED IN A SMALL TUI - - - - - - - - THIS FLOW IS GETTING A BIT LONG"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "Keep it extremely unix "
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "why j/k to move up and down? please make it up and down - - - - and if possile cnetwer the elements in the terminal - be responsive "
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "its extremely jumpy and we are rendering weird characters in the ui like /033[1;34"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "okay great - it looks much better - - - - - "
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "now lets adjust the functionality and uz slightly - - - in the iniitial menu - choice 1 should be open running session. (this one brings them to a menu of the current running sessions they can switch to - just like in the original script - - - - 2. Create new workspace, isolate the majority of the script here - we really only need those two options - - - - kick the script off when user selects new workspace as we normally would "
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "why tf didd you build a demo?! the typing session name doess not ork in creating neea woekspace"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "i also notice the switch-client command is not implemted to switch to runnunsoseseinon\n"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "weird i still cant type new seseim name :-("
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "great - much better - please include the fukll list from the next js themes list by rendering it from the nextjs sccript, calling the vqlues from there , nit hardcoding in the mai mainscript"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "i d rather use the script as single source of truth and not repeat ourselves in the code--not necessary to call two separate functions- just alwats use fzf and show full list"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "who dude ---you fucked uo naming the new project again"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "dude its still mad janky when i click new workspace ----cant type aything and hardcoded workspace namr being fed in"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "I cant type in the session name - - - - - please focus on the functionality and make the code actually work - you are overengineering and missing context"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "okay great - now jusat one more thing -0 the template selection - when i select nextjs app template - the fzf template list should should rendinring the options from the txt file =- just like in the original script, should it be using that somehow?"
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "great - now Im just concerned about another thing that I notcied - - - after configuring all the settings in the wizard - when user selects yes, create workspace. they have provided, almost every argument needed for the tmux wizard script to comeplete - - - we are now just needing to work on the pane setup and applications in the panes setup - - - I believe in the monolith this was all hardcoded - please plan and uinderstqand needs firdt - curently you are running the tmux wizard script raw after user has put in all these aruguemtns - this shows a fundemental lack of understanding of the refactoring into the tui I wanted - please converge the two so all the actions taken in the monolitihc script are now handled in this unix style ui, no MAJOR changex are needed accept to finish the intergration "
+  },
+  {
+    "session_id": "063391bf-2be6-4c0d-9493-a2c97b6ae68d",
+    "transcript_path": "/home/wv3/.claude/projects/-home-wv3/063391bf-2be6-4c0d-9493-a2c97b6ae68d.jsonl",
+    "cwd": "/home/wv3/claude-code-work/tmux-wizard-oss",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "great - now improve the UI during setup with the external scripts - theres some conflicting ui elements -0 the functionlaity is good so far except I have to press enter twice a few times during the flow where I shouldnt - - - take your time - no major changes - validate every change extremly carfeully"
+  }
+]

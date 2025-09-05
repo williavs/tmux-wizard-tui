@@ -1,0 +1,95 @@
+━━━ 🚀 POPULAR STARTERS ━━━
+minimal                          | Clean Next.js 15 with TypeScript
+vercel/commerce                  | Production e-commerce (Shopify/BigCommerce)
+vercel/nextjs-postgres-nextauth  | Full-stack with auth & database
+vercel/ai-chatbot                | AI chatbot with streaming
+vercel/nextjs-subscription       | SaaS subscription starter
+vercel/platforms                 | Multi-tenant platforms
+vercel/virtual-event-starter     | Virtual event/conference site
+
+━━━ 🔐 CLERK AUTH APPS (NEW!) ━━━
+clerk-auth/official/auth-starter | Official Clerk Auth Starter
+clerk-auth/official/app-router-demo | Clerk App Router Demo
+clerk-auth/saas-starters/aws-stripe-saas | AWS + Stripe SaaS
+clerk-auth/saas-starters/next-forge | Next Forge SaaS Boilerplate
+clerk-auth/real-time-collab/joinly | Team Collaboration Platform
+clerk-auth/real-time-collab/miro-clone | Miro Clone with Liveblocks
+clerk-auth/real-time-collab/docs-clone | Google Docs Clone
+clerk-auth/marketplaces/ticket-marketplace | Event Ticketing Platform
+clerk-auth/ai-apps/pdf-chat | PDF Chat with AI
+clerk-auth/convex-stack/convex-clerk-base | Convex + Clerk Template
+clerk-auth/convex-stack/convex-saas | Convex SaaS Starter
+clerk-auth/convex-stack/convex-monorepo | Web + Mobile Monorepo
+
+━━━ ⭐ MODERN SAAS (NEW!) ━━━
+modern-saas/saas-boilerplate     | Clerk + Shadcn + DrizzleORM + Multi-tenant
+modern-saas/firestarta           | NextAuth + Prisma + Supabase + Lemon Squeezy
+modern-saas/nextjs-saas-clerk    | Clerk + Supabase + Stripe + OpenAI
+modern-saas/next-saas-stripe     | Prisma + Auth.js v5 + Admin Panel
+modern-saas/next-supabase-stripe | High-quality Supabase + Stripe starter
+modern-saas/nextjs-boilerplate   | Next.js 15 + Tailwind 4 + Full Testing
+modern-saas/chadnext             | LuciaAuth + Prisma + Stripe + i18n
+
+━━━ 🎨 BLOG & CONTENT ━━━
+vercel/next-blog                 | Markdown blog starter
+examples/cms-sanity              | Blog with Sanity CMS
+examples/cms-contentful          | Blog with Contentful
+examples/cms-strapi              | Blog with Strapi
+examples/blog-starter            | Simple blog example
+
+━━━ 🔐 AUTHENTICATION ━━━
+examples/auth0                   | Auth0 integration
+examples/with-clerk              | Clerk authentication
+examples/with-supabase           | Supabase auth & database
+examples/with-firebase-auth      | Firebase authentication
+examples/with-magic              | Magic.link passwordless
+
+━━━ 💾 DATABASES ━━━
+examples/with-prisma             | Prisma ORM setup
+examples/with-mongodb            | MongoDB integration
+examples/with-redis              | Redis caching
+examples/with-fauna              | FaunaDB setup
+
+━━━ 🎯 API & BACKEND ━━━
+examples/api-routes              | API routes patterns
+examples/with-graphql            | GraphQL server
+examples/with-apollo             | Apollo GraphQL
+examples/api-routes-rest         | RESTful API design
+
+━━━ 💅 STYLING ━━━
+examples/with-tailwindcss        | Tailwind CSS setup
+examples/with-chakra-ui          | Chakra UI components
+examples/with-mantine            | Mantine UI
+examples/with-styled-components  | Styled Components
+
+━━━ 📱 SOCIAL MEDIA APPS (NEW!) ━━━
+social-media/nextjs15-social     | Next.js 15 Social Media Platform
+social-media/social-dashboard    | Social Media Analytics Dashboard
+social-media/discord-clone       | Discord Clone with Voice/Video
+social-media/threads-clone       | Meta Threads Clone
+social-media/twitter-clone       | Twitter/X Full Clone
+
+━━━ 🎬 VIDEO PLATFORMS (NEW!) ━━━
+youtube-builds/youtube-clone     | YouTube Clone with Comments
+youtube-builds/youtube-complete  | Complete YouTube (Next 15 + tRPC)
+youtube-builds/netflix-clone     | Netflix Streaming Clone
+
+━━━ 📊 CRM & DASHBOARDS (NEW!) ━━━
+crm-dashboards/nextcrm           | Full CRM (Next.js 15 + MongoDB)
+crm-dashboards/admin-dashboard   | Admin Panel (Shadcn + Recharts)
+crm-dashboards/analytics-dashboard| Real-time Analytics (Tremor)
+
+━━━ 🛍️ E-COMMERCE (NEW!) ━━━
+full-stack/digitalhippo          | Digital Products Marketplace
+full-stack/taxonomy              | Modern E-commerce (Stripe)
+full-stack/skateshop             | Skateboard Shop (DrizzleORM)
+
+━━━ 🤖 AI APPLICATIONS (NEW!) ━━━
+full-stack/ai-chatbot            | Vercel AI SDK Chatbot
+full-stack/openai-starter        | OpenAI Integration Starter
+full-stack/ai-companion          | AI Companion with Memory
+
+━━━ 👨‍💻 DEVELOPER TOOLS (NEW!) ━━━
+full-stack/portfolio             | Animated Portfolio Site
+full-stack/codesnap              | Code Snippet Manager
+full-stack/docs-template         | Documentation Site Template

@@ -1,0 +1,94 @@
+#!/bin/bash
+# Tmux Wizard Popup Launcher
+# Launches tmux-wizard TUI in a tmux popup window
+
+set -e
+
+# Default configuration
+DEFAULT_WIDTH="85%"
+DEFAULT_HEIGHT="75%"
+DEFAULT_TITLE=" Tmux Wizard"
+
+# Script directory detection
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+WIZARD_SCRIPT="$SCRIPT_DIR/../src/tuiwiz.sh"
+
+# Help function
+show_help() {
+    cat << 'EOF'
+Tmux Wizard Popup Launcher
+
+Usage: popup-wizard [OPTIONS]
+
+OPTIONS:
+  -w, --width WIDTH     Popup width (default: 85%)
+  -h, --height HEIGHT   Popup height (default: 75%)
+  -t, --title TITLE     Popup title (default: "🧙 Tmux Wizard")
+  --help               Show this help message
+
+TMUX CONFIGURATION:
+Add this line to your ~/.tmux.conf:
+  bind-key W display-popup -w 85% -h 75% -T "🧙 Tmux Wizard" "/path/to/bin/popup-wizard"
+
+Then use <prefix>W to launch the wizard (where <prefix> is your tmux prefix key).
+
+EXAMPLES:
+  popup-wizard                    # Use defaults
+  popup-wizard -w 90% -h 80%     # Custom size
+  popup-wizard -t "My Wizard"    # Custom title
+EOF
+}
+
+# Parse arguments
+WIDTH="$DEFAULT_WIDTH"
+HEIGHT="$DEFAULT_HEIGHT"
+TITLE="$DEFAULT_TITLE"
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -w|--width)
+            WIDTH="$2"
+            shift 2
+            ;;
+        -h|--height)
+            HEIGHT="$2"
+            shift 2
+            ;;
+        -t|--title)
+            TITLE="$2"
+            shift 2
+            ;;
+        --help)
+            show_help
+            exit 0
+            ;;
+        *)
+            echo "Unknown option: $1" >&2
+            echo "Use --help for usage information." >&2
+            exit 1
+            ;;
+    esac
+done
+
+# Verify we're in a tmux session
+if [[ -z "$TMUX" ]]; then
+    echo "Error: This script must be run from within a tmux session." >&2
+    echo "Start tmux first, then add the keybinding to your ~/.tmux.conf" >&2
+    exit 1
+fi
+
+# Verify the wizard script exists
+if [[ ! -f "$WIZARD_SCRIPT" ]]; then
+    echo "Error: Tmux wizard script not found at: $WIZARD_SCRIPT" >&2
+    exit 1
+fi
+
+# Set environment variable to indicate popup mode
+export TMUX_WIZARD_POPUP=1
+export TMUX_WIZARD_WIDTH="$WIDTH"
+export TMUX_WIZARD_HEIGHT="$HEIGHT"
+
+# Launch the wizard in popup mode
+# Note: When called from display-popup, we're already in the popup
+# This script serves as the command that runs inside the popup
+exec "$WIZARD_SCRIPT"
