@@ -87,6 +87,9 @@ examples/local/
 scripts/local/
 tmp/
 
+# Session Logs
+logs/
+
 # Backup Files
 *.bak
 *.backup
